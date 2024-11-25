@@ -1,0 +1,32 @@
+/* Add this CSS to your global styles or CSS module */
+.scroll-left .animate-scroll {
+  animation: scroll-left 60s linear infinite; /* Increased duration to slow down scrolling */
+}
+
+.scroll-right .animate-scroll {
+  animation: scroll-right 60s linear infinite; /* Increased duration to slow down scrolling */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Hide scrollbar */
+.scroll-left::-webkit-scrollbar,
+.scroll-right::-webkit-scrollbar {
+  display: none;
+}
